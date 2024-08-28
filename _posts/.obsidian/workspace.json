@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "67e13b32e46d3f80",
+    "type": "split",
+    "children": [
+      {
+        "id": "536d829c97c52c22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f270a62f785123fc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "a254cb02cb46f24e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "折腾/windows命令行与批处理.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "69f06eca9d1fbfc5",
+    "type": "split",
+    "children": [
+      {
+        "id": "658c2f66c7715665",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "61ab512fa15c3ff7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "029b2e36ef01a732",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d1e11d3205215023",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2d2e4db5c86145da",
+    "type": "split",
+    "children": [
+      {
+        "id": "d26324f0be39816c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e115488dfe1d8657",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "折腾/windows命令行与批处理.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0b08aff57c460898",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "折腾/windows命令行与批处理.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1145a316c2deb3bd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2381b37c9af96be3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "折腾/windows命令行与批处理.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false
+    }
+  },
+  "active": "a254cb02cb46f24e",
+  "lastOpenFiles": [
+    "scaffolds/post.md",
+    "总结/经验总结.md",
+    "未命名",
+    "总结/名句.md",
+    "scaffolds/draft.md",
+    "总结",
+    "折腾/CUPS.md",
+    "折腾/windows命令行与批处理.md",
+    "折腾/博客搭建.md",
+    "培训班/乐尚代驾.md",
+    "基础/Markdown.md",
+    "基础/hello-world.md",
+    "公开课/CS61B.md",
+    "公开课/CS61A.md",
+    "scaffolds/page.md",
+    "_posts/Python股票交易从入门到实践.md",
+    "_posts/名句.md",
+    "_posts/经验总结.md",
+    "_posts/折腾/windows命令行与批处理.md",
+    "_posts/折腾/CUPS.md",
+    "_posts/折腾/博客搭建.md",
+    "_posts/培训班/乐尚代驾.md",
+    "_posts/基础/Markdown.md",
+    "_posts/基础/hello-world.md",
+    "_posts/公开课/CS61B.md",
+    "_posts/公开课/CS61A.md",
+    "_posts/培训班",
+    "_posts/基础",
+    "_posts/公开课",
+    "_posts/未命名.md",
+    "_posts/折腾",
+    "发布.bat",
+    "发布.txt",
+    "新建文本文档.txt",
+    "_posts/scaffolds/post.md",
+    "03"
+  ]
+}

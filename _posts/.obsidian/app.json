@@ -1,0 +1,12 @@
+{
+  "userIgnoreFilters": [
+    "_data/",
+    "categories/",
+    "js/",
+    "link/",
+    "node_modules/",
+    "tags/",
+    "css/"
+  ],
+  "promptDelete": false
+}
