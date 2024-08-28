@@ -1,0 +1,93 @@
+//#footer-wrap
+//  if theme.footer.owner.enable
+//    - var now = new Date()
+//    - var nowYear = now.getFullYear()
+//    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+//      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
+//    else
+//      .copyright!= `&copy;${nowYear} By ${config.author}`
+//  if theme.footer.copyright
+//    .framework-info
+//      span= _p('footer.framework') + ' '
+//      a(href='https://hexo.io')= 'Hexo'
+//      span.footer-separator |
+//      span= _p('footer.theme') + ' '
+//      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+//  if theme.footer.custom_text
+//    .footer_custom_text!=`${theme.footer.custom_text}`
+
+#footer-wrap
+  #ft
+    .ft-item-1
+      .t-top
+        .t-t-l
+          p.ft-t.t-l-t 所谓
+          .bg-ad
+            div
+              | 日出未必意味着光明，太阳也无非是颗辰星而已，只有在我们醒着时，才是真正的破晓。                      -- 梭罗 《瓦尔登湖》
+            .btn-xz-box
+              a.btn-xz(href='https://csdiy.wiki/') CS自学指南
+        .t-t-r
+          p.ft-t.t-l-t 修仙导航
+          ul.ft-links
+            li
+              a(href='https://butterfly.js.org/') 建站指南
+              a(href='https://mubu.com/doc/1SmZPfl51PH') 黑尚大学
+            li
+              a(href='https://zh.singlelogin.re/') Z-lib
+              a(href='https://programmercarl.com/') 代码随想录
+            li
+              a(href='https://cs-plan.com/') CS Plan
+              a(href='https://sci-hub.sidesgame.com/') sci-hub
+            li
+              a(href='https://www.52pojie.cn/') 吾爱破解
+              a(href='https://www.right.com.cn/forum/') 恩山无线
+            li
+              a(href='http://www.wyzxwk.com/') 乌有之乡
+              a(href='https://cnotion.notion.site/Notion-e18268991cd14de89b1cad0de60baa91') Notion
+            li
+              a(href='https://leetcode.cn/') 力扣
+              a(href='https://www.mydigit.cn/forum-51-1.html') 数码之家
+    .ft-item-2
+      p.ft-t 推荐友链
+      .ft-img-group
+        .img-group-item
+          a(href='https://zsyyblog.com/')
+            img(src='https://img.zsyyblog.com/favicon.jpg' alt='')
+        .img-group-item
+          a(href='https://cnhuazhu.top/next/')
+            img(src='https://gcore.jsdelivr.net/gh/CNhuazhu/Image/avatar.jpg' alt='')
+        .img-group-item
+          a(href='https://blog.w1ndys.top/')
+            img(src='https://blog.w1ndys.top/img/about/icon.jpg' alt='')
+        .img-group-item
+          a(href='https://jikehou.cn/')
+            img(src='https://img.jikehou.cn/config/avatar.png' alt='')
+        .img-group-item
+          a(href='https://www.mgodmonkey.cn/')
+            img(src='https://raw.githubusercontent.com/anaconda110/MyPic/img/img/Weixin%20Image_20240724123517.png' alt='')
+        .img-group-item
+          a(href='https://blog.ysy950803.top/')
+            img(src='https://blog.ysy950803.top/img/avatar-ysy.png' alt='')
+        .img-group-item
+          a(href='https://blog.leonus.cn/')
+            img(src='https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5' alt='')
+        .img-group-item
+          a(href='https://dsanying.github.io/')
+            img(src='https://cdn.jsdelivr.net/gh/dsanying/ImgHosting/avatar.jpg' alt='')
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear + ' '} <i id="heartbeat" class="fa fas fa-heartbeat"></i> ${config.author}`
+    else
+      .copyright!= `&copy;${nowYear + ' '} <i id="heartbeat" class="fa fas fa-heartbeat"></i> ${config.author}`
+  if theme.footer.copyright
+    .framework-info
+      span= _p('footer.framework') + ' '
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-separator |
+      span= _p('footer.theme') + ' '
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`
