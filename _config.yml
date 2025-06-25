@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 临渊的博客
+title: Hexo
 subtitle: ''
-description: '我只身前行，却仿佛带着一万雄兵。'
+description: ''
 keywords:
-author: 临渊
-language: zh-CN
+author: John Doe
+language: en
 timezone: ''
 
 # URL
@@ -96,12 +96,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-#deploy:
-#  type: ''
 deploy:
   type: git
   repository: git@github.com:anaconda110/anaconda110.github.io.git
