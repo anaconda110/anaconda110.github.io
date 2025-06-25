@@ -31,6 +31,6 @@ jobs:
       - name: Deploy  
         uses: JamesIves/github-pages-deploy-action@releases/v3  
         with:  
-          REPOSITORY_NAME: anaconda110/hexo-actions  
+          REPOSITORY_NAME: anaconda110/anaconda110.github.io  
           BRANCH: html  
           FOLDER: public
