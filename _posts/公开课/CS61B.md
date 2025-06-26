@@ -2,7 +2,13 @@
 title: CS61B
 date:
   - 2024-07-30 17:04:17
-tags: 
+tags:
+  - CS
+author: 
+categories:
+  - 公开课
+cover: 
+feature: true
 ---
 
 ## 目的

@@ -2,7 +2,6 @@
 title: CS61A
 date:
   - 2024-07-23 21:28:20
-  - 2025-06-26 17:11
 tags:
   - CS
 categories:
