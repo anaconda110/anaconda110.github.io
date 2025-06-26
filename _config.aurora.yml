@@ -38,6 +38,13 @@ site:
 #！ @docs https://aurora.tridiamond.tech/guide/authors.html
 #! ---------------------------------------------------------------
 authors:
+  TriDiamond:
+    name: TriDiamond
+    avatar: https://up.enterdesk.com/edpic_source/44/ff/3d/44ff3d6bd2819d524facfcc33205d4cd.jpg
+    link: https://github.com/TriDiamond
+    description: 'Think like an artist, code like an artisan.'
+    socials:
+      github: https://tridiamond.tech
   ##! example
   # TriDiamond:
   #   name: TriDiamond
@@ -55,7 +62,24 @@ menu:
   About: true
   Tags: true
   Archives: true
+  Links: true
   Friends: false
+
+  # Custom menus
+  pages-menu:
+    name: 'MessageBoard'
+    path: '/page/message-board'
+    i18n:
+      cn: 留言板
+      en: Message board
+      
+  # 自定义菜单
+  message-board:
+    name: 'MessageBoard'
+    i18n:
+      cn: '留言板'
+      en: 'Message Board'
+    path: '/page/message-board'
 
 #! ---------------------------------------------------------------
 #! Theme Config
@@ -75,7 +99,14 @@ theme:
 #! @docs https://aurora.tridiamond.tech/guide/social.html
 #! ---------------------------------------------------------------
 socials:
-  customs:
+  # customs:
+  github: 'https://github.com/TriDiamond'
+  twitter: ''
+  stackoverflow: ''
+  weibo: 'https://weibo.com/u/7318914058'
+  zhihu: 'https://www.zhihu.com/people/tridiamond'
+  csdn: 'https://blog.csdn.net/TriDiamond6'
+  juejin: 'https://juejin.cn/user/1873223546578589'
   ##! Example:
   ##! --- Using SVG
   # bilibili:
