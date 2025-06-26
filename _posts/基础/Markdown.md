@@ -6,7 +6,7 @@ tags:
   - 语法
   - 基础
 author: 临渊
-categories:
+category:
   - 基础
 cover: https://cover.png
 feature: true

@@ -5,7 +5,7 @@ date:
 tags:
   - CS
 author: 临渊
-categories:
+category:
   - 公开课
 cover: https://cover.png
 feature: true
