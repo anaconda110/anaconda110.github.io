@@ -8,7 +8,7 @@ author: 临渊
 category:
   - 公开课
 cover: https://cover.png
-feature: true
+feature: false
 ---
 
 ## 目的

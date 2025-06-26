@@ -7,10 +7,10 @@ tags:
   - cups
   - 网络打印
   - opwrt
-category: 
+category:
   - 折腾
 cover: https://cover.png
-feature: true
+feature: false
 ---
 
 

@@ -5,7 +5,7 @@ date:
 tags:
   - CS
 cover: https://raw.githubusercontent.com/anaconda110/MyPic/img/img/2EKLP%7E0%7E)(RTH3(W(2V2%7D%7BW_tmb.jpg
-feature: true
+feature: false
 category:
   - 公开课
 author: 临渊
