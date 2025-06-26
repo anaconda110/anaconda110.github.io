@@ -198,8 +198,7 @@ waline:
   wordLimit: 0
   imageUploader: false
   pageSize: 10
-  server: https://waline-nnmcahltd-anaconda110s-projects.vercel.app/ # 填写服务端地址
-  path: /api
+  serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app/ # 填写服务端地址
 
 # # Enable Busuanzi statistic plugin
 # # see http://ibruce.info/2015/04/04/busuanzi/
