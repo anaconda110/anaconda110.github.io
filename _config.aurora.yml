@@ -196,9 +196,10 @@ waline:
   requiredMeta: ['nick', 'mail']
   commentSorting: 'latest'
   wordLimit: 0
-  imageUploader: true
+  imageUploader: false
   pageSize: 10
-  serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app/ # 填写服务端地址
+  server: https://waline-nnmcahltd-anaconda110s-projects.vercel.app/ # 填写服务端地址
+  path: /api
 
 # # Enable Busuanzi statistic plugin
 # # see http://ibruce.info/2015/04/04/busuanzi/
