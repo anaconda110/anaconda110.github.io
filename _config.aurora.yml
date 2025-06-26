@@ -200,10 +200,21 @@ waline:
   pageSize: 10
   serverURL: '' # 填写服务端地址
 
-# Enable Busuanzi statistic plugin
-# see http://ibruce.info/2015/04/04/busuanzi/
+# # Enable Busuanzi statistic plugin
+# # see http://ibruce.info/2015/04/04/busuanzi/
+# busuanzi:
+#   enable: false
+# 网站统计
+statistics:
+  enable: true
+  busuanzi: true  # 启用不蒜子统计
+  leancloud: false  # 关闭 LeanCloud 统计
+
+# 不蒜子配置
 busuanzi:
-  enable: false
+  enable: true
+  site_visit: true  # 显示网站总访客数
+  page_view: true   # 显示文章浏览次数
 
 copy_protection:
   enable: true
