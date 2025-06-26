@@ -7,7 +7,7 @@ tags:
 author: 临渊
 categories:
   - 公开课
-cover: 
+cover: https://cover.png
 feature: true
 ---
 
