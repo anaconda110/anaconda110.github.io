@@ -10,11 +10,7 @@ category:
 cover: https://cover.png
 feature: true
 ---
----
-title: Python股票交易从入门到实践
-date:
-  - 2024-08-05 11:39:24
-tags: 
+
 ---
 
 ## python语法
