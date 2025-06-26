@@ -3,6 +3,7 @@ title: CS61A
 date:
   - 2024-07-23 21:28:20
 tags:
+  - CS
 categories:
   - 公开课 
 cover: https://raw.githubusercontent.com/anaconda110/MyPic/img/img/2EKLP%7E0%7E)(RTH3(W(2V2%7D%7BW_tmb.jpg
