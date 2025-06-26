@@ -3,7 +3,6 @@ title: CS61A
 date:
   - 2024-07-23 21:28:20
 tags: 
-category:
 ---
 
 ## 目的

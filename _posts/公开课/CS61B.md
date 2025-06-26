@@ -3,7 +3,6 @@ title: CS61B
 date:
   - 2024-07-30 17:04:17
 tags: 
-category:
 ---
 
 ## 目的
