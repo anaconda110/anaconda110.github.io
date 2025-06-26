@@ -1,10 +1,18 @@
 ---
 title: CUPS
+author: 临渊
 date:
   - 2024-08-09 13:33:28
 tags:
+  - cups
+  - 网络打印
   - opwrt
+category: 
+  - 折腾
+cover: https://cover.png
+feature: true
 ---
+
 
 # 一、打印功能
 

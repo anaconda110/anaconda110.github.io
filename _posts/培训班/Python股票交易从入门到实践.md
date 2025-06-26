@@ -1,5 +1,17 @@
 ---
 title: Python股票交易从入门到实践
+author: 临渊
+date:
+  - 2025-06-26 19:46:39
+tags:
+  - 量化
+category: 
+  - 培训班
+cover: https://cover.png
+feature: true
+---
+---
+title: Python股票交易从入门到实践
 date:
   - 2024-08-05 11:39:24
 tags: 

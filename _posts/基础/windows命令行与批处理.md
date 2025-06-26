@@ -1,9 +1,17 @@
 ---
 title: windows命令行与批处理
+author: 临渊
 date:
   - 2024-08-03 09:28:21
-tags: 
+tags:
+  - 语法
+  - 基础
+category: 
+  - 基础
+cover: https://cover.png
+feature: true
 ---
+
 
 
 
