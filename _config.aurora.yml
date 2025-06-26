@@ -64,7 +64,6 @@ menu:
   Archives: true
   Links: true
   Friends: true
-  message-board: true
   # Custom menus
   pages-menu:
     name: 'MessageBoard'
