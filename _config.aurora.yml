@@ -63,8 +63,8 @@ menu:
   Tags: true
   Archives: true
   Links: true
-  Friends: false
-
+  Friends: true
+  message-board: true
   # Custom menus
   pages-menu:
     name: 'MessageBoard'
