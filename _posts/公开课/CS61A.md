@@ -10,9 +10,9 @@ categories:
 cover: https://raw.githubusercontent.com/anaconda110/MyPic/img/img/2EKLP%7E0%7E)(RTH3(W(2V2%7D%7BW_tmb.jpg
 feature: true
 category: 
-author: linyuan
+author: 临渊
 toc: ture
-excerpt:
+excerpt: ture
 ---
 
 ## 目的
