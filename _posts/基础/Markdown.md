@@ -5,8 +5,9 @@ date:
 tags:
   - 语法
   - 基础
-author: 
-categories: 
+author: 临渊
+categories:
+  - 基础
 cover: 
 feature: true
 ---
