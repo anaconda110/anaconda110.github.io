@@ -217,8 +217,8 @@ busuanzi:
   site_visit: true  # 显示网站总访客数
   page_view: true   # 显示文章浏览次数
   # 自定义显示格式（可选）
-  site_visit_format: 总访客数: %s 人
-  page_view_format: 本文浏览: %s 次
+  site_visit_format: '总访客数: %s 人'
+  page_view_format: '本文浏览: %s 次'
 
 copy_protection:
   enable: true
