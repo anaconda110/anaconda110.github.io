@@ -191,6 +191,7 @@ waline:
   enable: true
   recentComment: true
   reaction: true
+  placeholder: 欢迎提出建议
   login: 'disable'
   meta: ['nick', 'mail']
   requiredMeta: ['nick', 'mail']
@@ -198,7 +199,7 @@ waline:
   wordLimit: 0
   imageUploader: false
   pageSize: 10
-  serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app/ # 填写服务端地址
+  serverURL: waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
 
 # # Enable Busuanzi statistic plugin
 # # see http://ibruce.info/2015/04/04/busuanzi/
@@ -216,8 +217,8 @@ busuanzi:
   site_visit: true  # 显示网站总访客数
   page_view: true   # 显示文章浏览次数
   # 自定义显示格式（可选）
-  site_visit_format: '总访客数: %s 人'
-  page_view_format: '本文浏览: %s 次'
+  site_visit_format: 总访客数: %s 人
+  page_view_format: 本文浏览: %s 次
 
 copy_protection:
   enable: true
