@@ -187,20 +187,20 @@ site_meta:
 
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
-comments:
-  waline:
-    enable: true
-    recentComment: true
-    reaction: true
-    placeholder: 欢迎提出建议
-    login: 'disable'
-    meta: ['nick', 'mail']
-    requiredMeta: ['nick', 'mail']
-    commentSorting: 'latest'
-    wordLimit: 0
-    imageUploader: true
-    pageSize: 10
-    serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
+
+waline:
+  enable: true
+  recentComment: true
+  reaction: true
+  placeholder: 欢迎提出建议
+  login: 'disable'
+  meta: ['nick', 'mail']
+  requiredMeta: ['nick', 'mail']
+  commentSorting: 'latest'
+  wordLimit: 0
+  imageUploader: true
+  pageSize: 10
+  serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
 
 
 # # Enable Busuanzi statistic plugin
