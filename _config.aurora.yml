@@ -146,49 +146,49 @@ site_meta:
 #! ---------------------------------------------------------------
 
 # For local development only!
-gitalk:
-  enable: false
-  autoExpand: true
-  clientID: ''
-  clientSecret: ''
-  repo: '' ## dev-blo-comments
-  owner: '' ## owner name
-  admin: [''] ## ['admin_name']
-  id: uid
-  language: en
-  distractionFreeMode: true
-  recentComment: true
-  proxy: ''
+# gitalk:
+#   enable: false
+#   autoExpand: true
+#   clientID: ''
+#   clientSecret: ''
+#   repo: '' ## dev-blo-comments
+#   owner: '' ## owner name
+#   admin: [''] ## ['admin_name']
+#   id: uid
+#   language: en
+#   distractionFreeMode: true
+#   recentComment: true
+#   proxy: ''
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
-valine:
-  enable: false
-  app_id:
-  app_key:
-  avatar: ''
-  placeholder: Leave your thoughts behind~
-  visitor: true
-  lang: en
-  avatarForce: false
-  meta: ['nick', 'mail']
-  requiredFields: ['nick', 'mail']
-  admin: '' # admin username
-  recentComment: true
+# valine:
+#   enable: false
+#   app_id:
+#   app_key:
+#   avatar: ''
+#   placeholder: Leave your thoughts behind~
+#   visitor: true
+#   lang: en
+#   avatarForce: false
+#   meta: ['nick', 'mail']
+#   requiredFields: ['nick', 'mail']
+#   admin: '' # admin username
+#   recentComment: true
 
 # Twikoo comment plugin
 # see https://twikoo.js.org/quick-start.html
-twikoo:
-  enable: false
-  recentComment: true
-  envId: xxxxxxxxxxxxxxx # 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-  # region: ap-guangzhou # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-  lang: 'en' # 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+# twikoo:
+#   enable: false
+#   recentComment: true
+#   envId: xxxxxxxxxxxxxxx # 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+#   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+#   lang: 'en' # 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
 
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
 waline:
-  enable: false
+  enable: true
   recentComment: true
   reaction: true
   placeholder: 欢迎提出建议
@@ -199,7 +199,8 @@ waline:
   wordLimit: 0
   imageUploader: false
   pageSize: 10
-  serverURL: waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
+  serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
+
 
 # # Enable Busuanzi statistic plugin
 # # see http://ibruce.info/2015/04/04/busuanzi/
@@ -214,11 +215,11 @@ waline:
 # 不蒜子配置
 busuanzi:
   enable: true
-  site_visit: false  # 显示网站总访客数
-  page_view: true   # 显示文章浏览次数
-  # 自定义显示格式（可选）
-  site_visit_format: '总访客数: %s 人'
-  page_view_format: '本文浏览: %s 次'
+  # site_visit: true  # 显示网站总访客数
+  # page_view: true   # 显示文章浏览次数
+  # # 自定义显示格式（可选）
+  # site_visit_format: '总访客数: %s 人'
+  # page_view_format: '本文浏览: %s 次'
 
 copy_protection:
   enable: true
@@ -231,6 +232,36 @@ copy_protection:
   license:
     cn: 博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议
     en: This content is shared under the CC BY-NC-SA 4.0 protocol (Non-Commercial)
+
+
+
+#! ---------------------------------------------------------------
+#! Injections
+#! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
+#! ---------------------------------------------------------------
+injects:
+  scripts:
+  css:
+
+#! ---------------------------------------------------------------
+#! Footer links
+#! ---------------------------------------------------------------
+footer_links:
+  - title: # main title
+    links:
+      - title: # link title
+        url: # URL link
+      - title: # link title
+        url: # URL link
+      - title: Friends # link of friends mode / 友链模式
+        mode: 'links'
+
+#! ---------------------------------------------------------------
+#! Highlighter Shiki
+#! ---------------------------------------------------------------
+shiki:
+  enable: true
+  backgroundColor: "#1a1a1a"
 
 #! ---------------------------------------------------------------
 #! Enable Aurora Bot Dia
@@ -449,32 +480,3 @@ aurora_bot:
         text: 今年的<span>双十一</span>是和谁一起过的呢～
       - date: 12/20-12/31
         text: 这几天是<span>圣诞节</span>，主人肯定又去剁手买买买了～
-
-#! ---------------------------------------------------------------
-#! Injections
-#! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
-#! ---------------------------------------------------------------
-injects:
-  scripts:
-  css:
-
-#! ---------------------------------------------------------------
-#! Footer links
-#! ---------------------------------------------------------------
-footer_links:
-  - title: # main title
-    links:
-      - title: # link title
-        url: # URL link
-      - title: # link title
-        url: # URL link
-      - title: Friends # link of friends mode / 友链模式
-        mode: 'links'
-
-#! ---------------------------------------------------------------
-#! Highlighter Shiki
-#! ---------------------------------------------------------------
-shiki:
-  enable: true
-  backgroundColor: "#1a1a1a"
-
