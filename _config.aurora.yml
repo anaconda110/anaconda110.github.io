@@ -197,7 +197,7 @@ waline:
   requiredMeta: ['nick', 'mail']
   commentSorting: 'latest'
   wordLimit: 0
-  imageUploader: false
+  imageUploader: true
   pageSize: 10
   serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
 
