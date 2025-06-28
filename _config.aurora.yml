@@ -187,19 +187,20 @@ site_meta:
 
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
-waline:
-  enable: true
-  recentComment: true
-  reaction: true
-  placeholder: 欢迎提出建议
-  login: 'disable'
-  meta: ['nick', 'mail']
-  requiredMeta: ['nick', 'mail']
-  commentSorting: 'latest'
-  wordLimit: 0
-  imageUploader: true
-  pageSize: 10
-  serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
+comments:
+  waline:
+    enable: true
+    recentComment: true
+    reaction: true
+    placeholder: 欢迎提出建议
+    login: 'disable'
+    meta: ['nick', 'mail']
+    requiredMeta: ['nick', 'mail']
+    commentSorting: 'latest'
+    wordLimit: 0
+    imageUploader: true
+    pageSize: 10
+    serverURL: https://waline-nnmcahltd-anaconda110s-projects.vercel.app # 填写服务端地址
 
 
 # # Enable Busuanzi statistic plugin
@@ -212,14 +213,22 @@ waline:
 #   busuanzi: true  # 启用不蒜子统计
 #   leancloud: false  # 关闭 LeanCloud 统计
 
-# 不蒜子配置
-busuanzi:
+# # 不蒜子配置
+# busuanzi:
+#   enable: true
+#   site_visit: true  # 显示网站总访客数
+#   page_view: true   # 显示文章浏览次数
+#   # 自定义显示格式（可选）
+#   site_visit_format: '总访客数: %s 人'
+#   page_view_format: '本文浏览: %s 次'
+statistics:
   enable: true
-  # site_visit: true  # 显示网站总访客数
-  # page_view: true   # 显示文章浏览次数
-  # # 自定义显示格式（可选）
-  # site_visit_format: '总访客数: %s 人'
-  # page_view_format: '本文浏览: %s 次'
+  busuanzi:
+    enable: true
+    site_visit: true
+    page_view: true
+    site_visit_format: '总访客数: %s 人'
+    page_view_format: '本文浏览: %s 次'
 
 copy_protection:
   enable: true
