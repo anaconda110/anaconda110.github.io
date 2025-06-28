@@ -188,7 +188,7 @@ twikoo:
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
 waline:
-  enable: true
+  enable: false
   recentComment: true
   reaction: true
   placeholder: 欢迎提出建议
@@ -214,7 +214,7 @@ waline:
 # 不蒜子配置
 busuanzi:
   enable: true
-  site_visit: true  # 显示网站总访客数
+  site_visit: false  # 显示网站总访客数
   page_view: true   # 显示文章浏览次数
   # 自定义显示格式（可选）
   site_visit_format: '总访客数: %s 人'
