@@ -5,7 +5,6 @@ date:
   - 2024-08-02 09:28:21
 tags: 
 category: 
-cover: https://cover.png
 feature: false
 ---
 

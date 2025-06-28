@@ -7,7 +7,6 @@ tags:
   - 量化
 category: 
   - 培训班
-cover: https://cover.png
 feature: true
 ---
 

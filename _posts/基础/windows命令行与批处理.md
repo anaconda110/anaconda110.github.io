@@ -8,7 +8,6 @@ tags:
   - 基础
 category:
   - 基础
-cover: https://cover.png
 feature: false
 ---
 

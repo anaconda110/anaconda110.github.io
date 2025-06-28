@@ -8,7 +8,6 @@ tags:
 author: 临渊
 category:
   - 基础
-cover: https://cover.png
 feature: false
 ---
 

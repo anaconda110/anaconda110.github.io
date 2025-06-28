@@ -9,7 +9,6 @@ tags:
   - opwrt
 category:
   - 折腾
-cover: https://cover.png
 feature: false
 ---
 
