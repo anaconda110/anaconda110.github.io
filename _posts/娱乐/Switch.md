@@ -24,19 +24,16 @@ feature: false
 	5. 【Options】-【Change Language】改成简体中文。【选项】-【显示控制台】取消勾选，下次启动时不显示控制台。
 	6. [Prod.keys和# Firmware](https://prodkeys.net/)将下载得到的ProdKeys.net-v20.0.1.zip 和 Firmware 20.0.1.zip 分别在操作中导入
 
-  
-  
-作者：心一  
-链接：https://zhuanlan.zhihu.com/p/1922216938827932958  
-来源：知乎  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 ### 1.5 ~~citra~~
 
 ### 1.6 Ryubing  
 	是龙神模拟器的社区分支之一，由全球开发者共同维护的开源项目。它可以让你在电脑上直接模拟Switch，并且支持PC、macOS、Linux多平台运行，原生适配 Apple Silicon，对 M1 以上芯片有绝佳优化。
 ### 1.7 Nyushu
+### 1.8[Skyline Edge](https://archive.org/download/skyline-edge-all-versions/Skyline%20Edge%20All%20Versions/)（Android）
+
 ## 二、游戏
-### 2.1 [任天堂switch游戏2000多个+电脑安卓的模拟器+金手指](https://www.kdocs.cn/l/ceguk4acZn2)
+### 2.1 [任天堂switch游戏2000多个+电脑安卓的模拟器+金手指](https://www.kdocs.cn/l/ceguk4acZn29)
 ### 2.2/[掌机网](https://www.switchxiazai.com)
 ### [悠游任天堂](https://yyrtt.com/)
 

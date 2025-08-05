@@ -27,4 +27,22 @@ feature: false
             英文: 8bit, 1byte
             欧洲: 16bit, 2byte
             中文: 24bit, 3byte
-  ###   
+### 闭包
+---
+闭包: 本质, 内层函数对外层函数的局部变量的使用. 此时内层函数被称为闭包函数
+   1. 可以让一个变量常驻与内存
+   2. 可以避免全局变量被修改
+```python
+def func():
+    a = 10
+    def inner():
+        nonlocal a
+        a += 1
+        return a
+    return inner
+```
+
+### 装饰器
+---
+
+
