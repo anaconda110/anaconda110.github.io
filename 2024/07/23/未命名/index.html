@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Git基础 | 临渊的博客</title><meta name="author" content="临渊"><meta name="copyright" content="临渊"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git一、Git基础1、Git介绍Git是目前世界上最先进的分布式版本控制系统。 版本控制系统： 设计师在设计的时候做了很多版本  经过了数天去问设计师每个版本都改了些啥，设计师此时可能就说不上来了。这个时候如果能有一个软件能记录每次的文件改动，并且还能协调多用户编辑，那岂不是美滋滋？这个软件应用起来应该像这个样子：            版本 文档名 操作用户 日志 修改时间   1 sheji">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git基础">
+<meta property="og:url" content="https://anaconda110.github.io/2024/07/23/%E6%9C%AA%E5%91%BD%E5%90%8D/index.html">
+<meta property="og:site_name" content="临渊的博客">
+<meta property="og:description" content="Git一、Git基础1、Git介绍Git是目前世界上最先进的分布式版本控制系统。 版本控制系统： 设计师在设计的时候做了很多版本  经过了数天去问设计师每个版本都改了些啥，设计师此时可能就说不上来了。这个时候如果能有一个软件能记录每次的文件改动，并且还能协调多用户编辑，那岂不是美滋滋？这个软件应用起来应该像这个样子：            版本 文档名 操作用户 日志 修改时间   1 sheji">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images3.alphacoders.com/136/1369831.png">
+<meta property="article:published_time" content="2024-07-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-01T18:06:50.533Z">
+<meta property="article:author" content="临渊">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images3.alphacoders.com/136/1369831.png"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="https://anaconda110.github.io/2024/07/23/%E6%9C%AA%E5%91%BD%E5%90%8D/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Git基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-08-02 02:06:50'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/anaconda110/MyPic/img/img/16991083173741774.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images3.alphacoders.com/136/1369831.png')"><nav id="nav"><span id="blog-info"><a href="/" title="临渊的博客"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-22T16:00:00.000Z" title="发表于 2024-07-23 00:00:00">2024-07-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-01T18:06:50.533Z" title="更新于 2026-08-02 02:06:50">2026-08-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%98%E8%85%BE/">折腾</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Git基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h1 id="一、Git基础"><a href="#一、Git基础" class="headerlink" title="一、Git基础"></a>一、Git基础</h1><h2 id="1、Git介绍"><a href="#1、Git介绍" class="headerlink" title="1、Git介绍"></a>1、Git介绍</h2><p>Git是目前世界上最先进的分布式版本控制系统。</p>
+<p>版本控制系统：</p>
+<p>设计师在设计的时候做了很多版本</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg"></p>
+<p>经过了数天去问设计师每个版本都改了些啥，设计师此时可能就说不上来了。这个时候如果能有一个软件能记录每次的文件改动，并且还能协调多用户编辑，那岂不是美滋滋？这个软件应用起来应该像这个样子：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>版本</strong></td>
+<td><strong>文档名</strong></td>
+<td><strong>操作用户</strong></td>
+<td><strong>日志</strong></td>
+<td><strong>修改时间</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>shejigao.txt</td>
+<td>zhangsan</td>
+<td>修改标题</td>
+<td>2019-10-01 10:10:31</td>
+</tr>
+<tr>
+<td>2</td>
+<td>shejigao.txt</td>
+<td>lisi</td>
+<td>删除备注信息</td>
+<td>2019-10-01 10:11:49</td>
+</tr>
+<tr>
+<td>3</td>
+<td>shejigao.txt</td>
+<td>lisi</td>
+<td>增加了许可协议</td>
+<td>2019-10-03 11:31:00</td>
+</tr>
+<tr>
+<td>4</td>
+<td>shejigao.txt</td>
+<td>zhangsan</td>
+<td>修改版权信息</td>
+<td>2019-10-05 09:32:11</td>
+</tr>
+</tbody></table>
+<h2 id="2、Git与Github"><a href="#2、Git与Github" class="headerlink" title="2、Git与Github"></a>2、Git与Github</h2><h3 id="2-1、两者区别"><a href="#2-1、两者区别" class="headerlink" title="2.1、两者区别"></a>2.1、两者区别</h3><p>Git是一个分布式版本控制系统，简单的说其就是一个软件，用于记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的软件。</p>
+<p>Github（<a target="_blank" rel="noopener" href="https://www.github.com/">https://www.github.com</a>）是一个为用户提供Git服务的网站，简单说就是一个可以放代码的地方（不过可以放的当然不仅是代码）。Github除了提供管理Git的web界面外，还提供了订阅、关注、讨论组、在线编辑器等丰富的功能。Github被称之为全球最大的基友网站。</p>
+<h3 id="2-2、Github注册"><a href="#2-2、Github注册" class="headerlink" title="2.2、Github注册"></a>2.2、Github注册</h3><p>打开Github官网：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a>，点击右上角的“Sign up”按钮。</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg"></p>
+<p>选择免费的账户类型：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg"></p>
+<p>提示我们需要验证邮箱：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg"></p>
+<p>打开邮箱中收到的邮件，点击按钮进行验证：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg"></p>
+<p>至此，Github帐号注册完毕，我们将在后面会使用到本次注册的帐号。</p>
+<h2 id="3、Git安装"><a href="#3、Git安装" class="headerlink" title="3、Git安装"></a>3、Git安装</h2><p>①下载得到安装包，并运行</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg"></p>
+<p>②选择软件的安装位置</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg"></p>
+<p>③选择需安装的组件（默认即可，直接下一步）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg"></p>
+<p>④选择使用的编辑器（默认即可，直接下一步）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image018.jpg"></p>
+<p>⑤环境变量调节</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image020.jpg"></p>
+<p>⑥使用OpenSSH，直接下一步即可</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image022.jpg"></p>
+<p>⑦使用OpenSSL库</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image024.jpg"></p>
+<p>⑧配置命令行会话（默认即可）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image026.jpg"></p>
+<p>⑨配置终端（默认即可）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image028.jpg"></p>
+<p>⑩配置额外的选项（默认即可）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image030.jpg"></p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image032.jpg"></p>
+<p>安装完成</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image034.jpg"></p>
+<p>在桌面空白处右键鼠标，若出现“Git GUI Here”、“Git Bash Here”则安装成功：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image036.jpg"></p>
+<h1 id="二、Git的使用"><a href="#二、Git的使用" class="headerlink" title="二、Git的使用"></a>二、Git的使用</h1><h2 id="1、本地仓库"><a href="#1、本地仓库" class="headerlink" title="1、本地仓库"></a>1、本地仓库</h2><h3 id="1-1、工作流程"><a href="#1-1、工作流程" class="headerlink" title="1.1、工作流程"></a>1.1、工作流程</h3><p>Git本地操作的三个区域：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image038.jpg"></p>
+<p>工作流程：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image040.jpg"></p>
+<h3 id="1-2、本地仓库操作"><a href="#1-2、本地仓库操作" class="headerlink" title="1.2、本地仓库操作"></a>1.2、本地仓库操作</h3><p>什么是仓库呢？仓库又名版本库，英文名repository，我们可以简单理解成是一个目录，用于存放代码的，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除等操作Git都能跟踪到。</p>
+<p>①在安装好后首次使用需要先进行全局配置</p>
+<p>桌面空白处右键，点击“Git Bash Here”以打开Git命令行窗口</p>
+<p>$ git config –global user.name “用户名”</p>
+<p>$ git config –global user.email “邮箱地址”</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image042.jpg"></p>
+<p>②创建仓库</p>
+<p>当我们需要让Git去管理某个新项目&#x2F;已存在项目的时候，就需要创建仓库了。注意，创建仓库时使用的目录不一定要求是空目录，选择一个非空目录也是可以的，但是不建议在现有项目上来学习Git，否则造成的一切后果概不负责！</p>
+<p>注意：为了避免在学习或使用过程中出现各种奇葩问题，请不要使用包含中文的目录名（父目录亦是如此）。</p>
+<p>a. 创建空目录</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image044.jpg"></p>
+<p>b. 在命令行中进入项目目录pro_git</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image046.jpg"></p>
+<p>c. Git仓库初始化（让Git知道，它需要来管理这个目录）</p>
+<p>指令：git init</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image048.jpg"></p>
+<p>表现：执行之后会在项目目录下创建“.git”的隐藏目录，这个目录是Git所创建的，不能删除，也不能随意更改其中的内容。</p>
+<p>③Git常用指令操作</p>
+<p>查看当前状态：git status                                           【非必要】</p>
+<p>添加到缓存区：git add 文件名</p>
+<p>说明：git add指令，可以添加一个文件，也可以同时添加多个文件。</p>
+<p>语法1：git add 文件名</p>
+<p>语法2：git add 文件名1 文件名2 文件名3 …</p>
+<p>语法3：git add .                              【添加当前目录到缓存区中】</p>
+<p>提交至版本库：git commit -m “注释内容”</p>
+<p>在后续对于文件（可以操作1个或多个）操作之后，重复使用git add与git commit指令即可。</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image050.jpg"></p>
+<h3 id="1-3、时光穿梭机——版本回退"><a href="#1-3、时光穿梭机——版本回退" class="headerlink" title="1.3、时光穿梭机——版本回退"></a>1.3、时光穿梭机——版本回退</h3><p>版本回退分为两步骤进行操作：</p>
+<p>步骤：</p>
+<p>         ①查看版本，确定需要回到的时刻点</p>
+<p>                            指令：</p>
+<p>git log</p>
+<p>git log –pretty&#x3D;oneline</p>
+<p>         ②回退操作</p>
+<p>                            指令：</p>
+<p>                                     git reset –hard 提交编号</p>
+<p>案例：想坐时光机回到创建好第一个文件readme.txt的时候。</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image052.jpg"></p>
+<p>注意：回到过去之后，要想再回到之前最新的版本的时候，则需要使用指令去查看历史操作，以得到最新的commit id。</p>
+<p>指令：git reflog</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image054.jpg"></p>
+<p>小结：</p>
+<p>         a. 要想回到过去，必须先得到commit id，然后通过git reset –hard 进行回退；</p>
+<p>         b. 要想回到未来，需要使用git reflog进行历史操作查看，得到最新的commit id；</p>
+<p>         c. 在写回退指令的时候commit id可以不用写全，git自动识别，但是也不能写太少，至少需要写前4位字符；</p>
+<h2 id="2、远程仓库"><a href="#2、远程仓库" class="headerlink" title="2、远程仓库"></a>2、远程仓库</h2><p>线上仓库的操作学习以Github为例。</p>
+<h3 id="2-1、线上仓库创建"><a href="#2-1、线上仓库创建" class="headerlink" title="2.1、线上仓库创建"></a>2.1、线上仓库创建</h3><p>打开创建仓库页面：<a target="_blank" rel="noopener" href="https://github.com/new">https://github.com/new</a></p>
+<p>圈出的部分为必填项，其余根据实际需要选择性补充：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image056.jpg"></p>
+<p><strong>注意：仓库名要求在当前帐号下唯一。</strong></p>
+<h3 id="2-2、两种常规使用方式"><a href="#2-2、两种常规使用方式" class="headerlink" title="2.2、两种常规使用方式"></a>2.2、两种常规使用方式</h3><h4 id="2-2-1、基于http-https协议"><a href="#2-2-1、基于http-https协议" class="headerlink" title="2.2.1、基于http&#x2F;https协议"></a>2.2.1、基于http&#x2F;https协议</h4><p>a. 创建空目录，名称就称为shop</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image058.jpg"></p>
+<p>b. 使用clone指令克隆线上仓库到本地</p>
+<p>语法：git clone 线上仓库地址</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image060.jpg"></p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image062.jpg"></p>
+<p>c. 在仓库上做对应的操作（提交暂存区、提交本地仓库、提交线上仓库、拉取线上仓库）</p>
+<p>提交到线上仓库的指令：git push</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image064.jpg"></p>
+<p>在首次往线上仓库shop提交内容的时候出现了403的致命错误，原因是不是任何人都可以往线上仓库提交内容，必须需鉴权。</p>
+<p>需要修改“.git&#x2F;config”文件内容：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image066.jpg"></p>
+<p>例如：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image068.jpg"></p>
+<p>在设置好用户名密码之后再次尝试push指令：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image070.jpg"></p>
+<p>如果看到类似上述效果（没有fatal错误）则表示提交成功。</p>
+<p>【验证】此时可以观察浏览器，刷新线上仓库的地址：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image072.jpg"></p>
+<p>拉取线上仓库：git pull</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image074.jpg"></p>
+<p>提醒：</p>
+<p>         在每天工作的第一件事就是先git pull拉取线上最新的版本；每天下班前要做的是git push，将本地代码提交到线上仓库。</p>
+<h4 id="2-2-2、基于ssh协议（推荐）"><a href="#2-2-2、基于ssh协议（推荐）" class="headerlink" title="2.2.2、基于ssh协议（推荐）"></a>2.2.2、基于ssh协议（推荐）</h4><p><strong>该方式与前面https<strong><strong>方式相比，只是影响github</strong></strong>对于用户的身份鉴权方式，对于git****的具体操作（如提交本地、添加注释、提交远程等操作）没有任何影响。</strong></p>
+<p>生成公私玥对指令（需先自行安装OpenSSH）：ssh-keygen -t rsa -C “注册邮箱”</p>
+<p><strong>步骤：</strong></p>
+<p>         <strong>①生成客户端公私玥文件</strong></p>
+<p>         <strong>②将公钥上传到Github</strong></p>
+<p>实际操作：</p>
+<p>①打开提示</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image076.jpg"></p>
+<p>②创建公私玥对文件</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image078.jpg"></p>
+<p>③上传公钥文件内容（id_rsa.pub）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image080.jpg"></p>
+<p>填写完毕之后保存即可。</p>
+<p>④执行后续git操作，操作与先前一样</p>
+<p>a. clone线上仓库到本地（git clone）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image082.jpg"></p>
+<p>b. 修改文件后添加缓存区、提交本地仓库、提交线上仓库</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image084.jpg"></p>
+<p>在push的时候并没有提示要求我们输入帐号密码，因为公私玥已经实现了用户身份鉴权。</p>
+<p>线上仓库的效果：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image086.jpg"></p>
+<h3 id="2-3、分支管理"><a href="#2-3、分支管理" class="headerlink" title="2.3、分支管理"></a>2.3、分支管理</h3><p>什么是分支？</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image088.jpg"></p>
+<p>在版本回退的章节里，每次提交后都会有记录，Git把它们串成时间线，形成类似于时间轴的东西，这个时间轴就是一个分支，我们称之为master分支。</p>
+<p>在开发的时候往往是团队协作，多人进行开发，因此光有一个分支是无法满足多人同时开发的需求的，并且在分支上工作并不影响其他分支的正常使用，会更加安全，Git鼓励开发者使用分支去完成一些开发任务。</p>
+<p>分支相关指令：</p>
+<p>查看分支：git branch</p>
+<p>创建分支：git branch 分支名</p>
+<p>切换分支：git checkout 分支名<a href="#_msocom_1">[DY1]</a> </p>
+<p>删除分支：git branch -d 分支名</p>
+<p>合并分支：git merge 被合并的分支名</p>
+<p><strong>查看分支：</strong></p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image090.jpg"></p>
+<p>注意：当前分支前面有个标记“*”。</p>
+<p><strong>创建分支：</strong></p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image092.jpg"></p>
+<p><strong>切换分支：</strong></p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image094.jpg"></p>
+<p><strong>合并分支：</strong></p>
+<p>现在先在dev分支下的readme文件中新增一行并提交本地</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image096.jpg"></p>
+<p>切换到master分支下观察readme文件</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image098.jpg"></p>
+<p>将dev分支的内容与master分支合并：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image100.jpg"></p>
+<p><strong>删除分支：</strong></p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image102.jpg"></p>
+<p>注意：在删除分支的时候，一定要先退出要删除的分支，然后才能删除。</p>
+<p>合并所有分支之后，需要将master分支提交线上远程仓库中：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image104.jpg"></p>
+<h3 id="2-4、冲突的产生与解决"><a href="#2-4、冲突的产生与解决" class="headerlink" title="2.4、冲突的产生与解决"></a>2.4、冲突的产生与解决</h3><p>案例：模拟产生冲突。</p>
+<p>①同事在下班之后修改了线上仓库的代码</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image106.jpg"></p>
+<p>注意：此时我本地仓库的内容与线上不一致的。</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image108.jpg"></p>
+<p>②第二天上班的时候，我没有做git pull操作，而是直接修改了本地的对应文件的内容</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image110.jpg"></p>
+<p>③需要在下班的时候将代码修改提交到线上仓库（git push）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image112.jpg"></p>
+<p>提示我们要在再次push之前先git pull操作。</p>
+<p>【解决冲突】</p>
+<p>④先git pull</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image114.jpg"></p>
+<p>此时git已经将线上与本地仓库的冲突合并到了对应的文件中。</p>
+<p>⑤打开冲突文件，解决冲突</p>
+<p>解决方法：需要和同事（谁先提交的）进行商量，看代码如何保留，将改好的文件再次提交即可。</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image116.jpg"></p>
+<p>⑥重新提交</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image118.jpg"></p>
+<p>线上效果：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image120.jpg"></p>
+<p>新手上路小技巧：上班第一件事先git pull，可以在一定程度上避免冲突的产生。</p>
+<h1 id="三、Git实用技能"><a href="#三、Git实用技能" class="headerlink" title="三、Git实用技能"></a>三、Git实用技能</h1><h2 id="1、图形管理工具"><a href="#1、图形管理工具" class="headerlink" title="1、图形管理工具"></a>1、图形管理工具</h2><p>①Github for Desktop</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image122.png"></p>
+<p>Github出品的软件，功能完善，使用方便。对于经常使用GitHub的开发人员来说是非常便捷的工具。界面干净，用起来非常顺手，顶部的分支时间线非常绚丽。</p>
+<p>②Source tree</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image124.png"></p>
+<p>老牌的Git GUI管理工具了，也号称是最好用的Git GUI工具。功能丰富，基本操作和高级操作都非常流畅，适合初学者上手。</p>
+<p>③TortoiseGit</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image126.png"></p>
+<p>对于熟悉SVN的开发人员来说，这个小乌龟图标应该是非常友善了。TortoiseGit 简称 tgit, 中文名海龟Git。它与其前辈TortoiseSVN都是非常优秀的开源版本控制客户端软件。</p>
+<h2 id="2、忽略文件"><a href="#2、忽略文件" class="headerlink" title="2、忽略文件"></a>2、忽略文件</h2><p>场景：在项目目录下有很多万年不变的文件目录，例如css、js、images等，或者还有一些目录即便有改动，我们也不想让其提交到远程仓库的文档，此时我们可以使用“忽略文件”机制来实现需求。</p>
+<p>忽略文件需要新建一个名为.gitignore的文件，该文件用于声明忽略文件或不忽略文件的规则，规则对当前目录及其子目录生效。</p>
+<p>注意：该文件因为没有文件名，没办法直接在windows目录下直接创建，可以通过命令行Git Bash来touch创建。</p>
+<p>常见规则写法有如下几种：</p>
+<p>1）&#x2F;mtk&#x2F;               过滤整个文件夹</p>
+<p>2）*.zip                过滤所有.zip文件</p>
+<p>3）&#x2F;mtk&#x2F;do.c           过滤某个具体文件</p>
+<ol start="4">
+<li>!index.php                  不过滤具体某个文件</li>
+</ol>
+<p>    </p>
+<p>在文件中，以#开头的都是注释。</p>
+<p>案例：</p>
+<p>①先在本地仓库中新建一个js目录以及目录中js文件</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image128.jpg"></p>
+<p>②依次提交本地与线上</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image130.jpg"></p>
+<p>③新增.gitignore文件</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image132.jpg"></p>
+<p>④编写文件中的规则（根据需要编写）</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image134.jpg"></p>
+<p>⑤再次提交本地与线上</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image136.jpg"></p>
+<p>观察线上仓库js目录中是否有新增index.js文件：</p>
+<p><img src="file:///C:/Users/Tom/AppData/Local/Temp/msohtmlclip1/01/clip_image138.jpg"></p>
+<hr>
+<p> <a href="#_msoanchor_1">[DY1]</a>对于新分支，可以使用“git checkout -b 分支名”指令来切换分支，-b选项表示创建并切换，相当于是两个操作指令。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://anaconda110.github.io">临渊</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://anaconda110.github.io/2024/07/23/%E6%9C%AA%E5%91%BD%E5%90%8D/">https://anaconda110.github.io/2024/07/23/%E6%9C%AA%E5%91%BD%E5%90%8D/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://anaconda110.github.io" target="_blank">临渊的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Git/">Git</a></div><div class="post_share"><div class="social-share" data-image="https://images3.alphacoders.com/136/1369831.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/07/23/%E6%8A%98%E8%85%BE/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="博客搭建"><img class="cover" src="https://images3.alphacoders.com/133/1332803.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">博客搭建</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/anaconda110/MyPic/img/img/16991083173741774.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">临渊</div><div class="author-info__description">我只身前行，却仿佛带着一万雄兵。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/anaconda110" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:anaconda1@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git"><span class="toc-number">1.</span> <span class="toc-text">Git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Git%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">一、Git基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81Git%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text">1、Git介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Git%E4%B8%8EGithub"><span class="toc-number">2.2.</span> <span class="toc-text">2、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E3%80%81%E4%B8%A4%E8%80%85%E5%8C%BA%E5%88%AB"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1、两者区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E3%80%81Github%E6%B3%A8%E5%86%8C"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2、Github注册</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Git%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.</span> <span class="toc-text">3、Git安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Git%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">二、Git的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">3.1.</span> <span class="toc-text">1、本地仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1、工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2、本地仓库操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E3%80%81%E6%97%B6%E5%85%89%E7%A9%BF%E6%A2%AD%E6%9C%BA%E2%80%94%E2%80%94%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3、时光穿梭机——版本回退</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">3.2.</span> <span class="toc-text">2、远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E3%80%81%E7%BA%BF%E4%B8%8A%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1、线上仓库创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E3%80%81%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2、两种常规使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1%E3%80%81%E5%9F%BA%E4%BA%8Ehttp-https%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">2.2.1、基于http&#x2F;https协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2%E3%80%81%E5%9F%BA%E4%BA%8Essh%E5%8D%8F%E8%AE%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">3.2.2.2.</span> <span class="toc-text">2.2.2、基于ssh协议（推荐）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E3%80%81%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3、分支管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4%E3%80%81%E5%86%B2%E7%AA%81%E7%9A%84%E4%BA%A7%E7%94%9F%E4%B8%8E%E8%A7%A3%E5%86%B3"><span class="toc-number">3.2.4.</span> <span class="toc-text">2.4、冲突的产生与解决</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81Git%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">三、Git实用技能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">4.1.</span> <span class="toc-text">1、图形管理工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"><span class="toc-number">4.2.</span> <span class="toc-text">2、忽略文件</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/08/02/%E6%8A%98%E8%85%BE/GitHub/" title="无题"><img src="https://images2.alphacoders.com/539/53920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2026/08/02/%E6%8A%98%E8%85%BE/GitHub/" title="无题">无题</a><time datetime="2026-08-01T17:49:22.448Z" title="发表于 2026-08-02 01:49:22">2026-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/02/%E6%8A%98%E8%85%BE/Python%E8%82%A1%E7%A5%A8%E4%BA%A4%E6%98%93%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/" title="无题"><img src="https://images3.alphacoders.com/136/1369831.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2026/08/02/%E6%8A%98%E8%85%BE/Python%E8%82%A1%E7%A5%A8%E4%BA%A4%E6%98%93%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/" title="无题">无题</a><time datetime="2026-08-01T17:49:22.448Z" title="发表于 2026-08-02 01:49:22">2026-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/02/%E5%9F%BA%E7%A1%80/Jupyter/" title="无题"><img src="https://images4.alphacoders.com/134/1343543.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2026/08/02/%E5%9F%BA%E7%A1%80/Jupyter/" title="无题">无题</a><time datetime="2026-08-01T17:49:22.428Z" title="发表于 2026-08-02 01:49:22">2026-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/02/%E5%9F%BA%E7%A1%80/hello-world/" title="Hello World"><img src="https://images3.alphacoders.com/133/1332803.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2026/08/02/%E5%9F%BA%E7%A1%80/hello-world/" title="Hello World">Hello World</a><time datetime="2026-08-01T17:49:22.424Z" title="发表于 2026-08-02 01:49:22">2026-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/02/hello-world/" title="无题"><img src="https://images4.alphacoders.com/134/1343543.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2026/08/02/hello-world/" title="无题">无题</a><time datetime="2026-08-01T17:49:22.292Z" title="发表于 2026-08-02 01:49:22">2026-08-02</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://images3.alphacoders.com/136/1369831.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 临渊</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script src="/js/leaves.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
